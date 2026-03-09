@@ -51,7 +51,7 @@ export default function ProductTable({ products }: { products: Product[] }) {
 
           {/* ACTIONS */}
           <div className="flex gap-2">
-            <Link href={`/admin/products/${p.id}/reviews`} className="bg-green-600 text-white px-3 py-1 rounded">Reviews</Link>
+            <Link href={`/admin/products/${p.id}`} className="bg-green-600 text-white px-3 py-1 rounded">Reviews</Link>
             <button onClick={() => deleteProduct(p.id)} className="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
           </div>
         </div>
