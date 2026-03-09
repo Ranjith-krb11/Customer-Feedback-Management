@@ -98,7 +98,7 @@ const fetchData = useCallback(async () => {
                         ? "bg-green-100 text-green-700"
                         : "bg-gray-100 text-gray-500"
                     }`}>
-                      {review.responses.length > 0 ? "Responded" : "Pending"}
+                      {review.responses.length > 0 ? "Resolved" : "Unresolved"}
                     </span>
                   </div>
                 </div>

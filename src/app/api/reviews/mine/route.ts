@@ -14,7 +14,11 @@ export async function GET() {
     where: { userId },
     include: {
       product: true,
-      responses: true,
+      responses: {
+        include:{
+          admin:true,
+        }
+      },
     },
     orderBy: { createdAt: "desc" },
   });

@@ -55,6 +55,7 @@ export default function ReviewModal({
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ productId, rating, reviewText: reviewText.trim() }),
       });
 
@@ -71,7 +72,7 @@ export default function ReviewModal({
   };
 
   const sentimentLabel =
-    rating >= 4 ? "😊 Positive" : rating === 3 ? "😐 Neutral" : rating > 0 ? "😞 Negative" : "";
+    rating === 5 ? "EXCELLENT" : rating === 4 ? "GOOD" : rating === 3 ? "SATISFIED" : rating === 2 ? "BAD" : "POOR";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">

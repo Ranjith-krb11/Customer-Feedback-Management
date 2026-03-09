@@ -54,8 +54,8 @@ export default function MyReviewsPage() {
       <div className="grid grid-cols-3 gap-4 mb-6">
         {[
           { label: "Total", value: reviews.length },
-          { label: "Responded", value: reviews.filter((r) => r.responses.length > 0).length },
-          { label: "Pending", value: reviews.filter((r) => r.responses.length === 0).length },
+          { label: "Resolved", value: reviews.filter((r) => r.responses.length > 0).length },
+          { label: "Unresolved", value: reviews.filter((r) => r.responses.length === 0).length },
         ].map((s) => (
           <div key={s.label} className="bg-white shadow rounded-xl p-4 text-center">
             <p className="text-2xl font-bold text-gray-900">{s.value}</p>
